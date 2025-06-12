@@ -281,7 +281,7 @@ export const useChatHandler = () => {
           chatImages
         )
 
-        const response = await fetch("/api/chat/tools", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ask`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
