@@ -287,9 +287,7 @@ export const useChatHandler = () => {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            chatSettings: payload.chatSettings,
-            messages: formattedMessages,
-            selectedTools
+            question: messageContent
           })
         })
 
