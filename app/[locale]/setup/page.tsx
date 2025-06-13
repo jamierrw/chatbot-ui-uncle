@@ -111,11 +111,11 @@ export default function SetupPage() {
     }
   }
 
-  const handleSaveSetupSetting = async () => {
-    const session = (await supabase.auth.getSession()).data.session
-    if (!session) {
-      return router.push("/login")
-    }
+//  const handleSaveSetupSetting = async () => {
+//    const session = (await supabase.auth.getSession()).data.session
+//    if (!session) {
+//      return router.push("/login")
+//    }
 
     const user = session.user
     const profile = await getProfileByUserId(user.id)
